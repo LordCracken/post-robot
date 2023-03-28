@@ -32,7 +32,7 @@ class VillageState {
     });
     const undeliveredParcels = updatedParcels.filter(p => p.place !== p.address);
 
-    return new VillageState(destination, undeliveredParcels);
+    return new VillageState(destination, undeliveredParcels, this.roads);
   }
 }
 
