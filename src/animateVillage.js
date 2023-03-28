@@ -16,8 +16,7 @@ class Animation {
 
     let outer = window.__sandbox ? window.__sandbox.output.div : document.body,
       doc = outer.ownerDocument;
-    this.node = outer.appendChild(doc.createElement('div'));
-    this.node.style.cssText = 'position: relative; line-height: 0.1; margin-left: 10px';
+    this.node = outer.appendChild(doc.createElement('main'));
     this.map = this.node.appendChild(doc.createElement('img'));
     this.map.src = 'img/village2x.png';
     this.map.style.cssText = 'vertical-align: -8px';
@@ -31,8 +30,6 @@ class Animation {
 
     this.text = this.node.appendChild(doc.createElement('span'));
     this.button = this.node.appendChild(doc.createElement('button'));
-    this.button.style.cssText =
-      'color: white; background: #28b; border: none; border-radius: 2px; padding: 2px 5px; line-height: 1.1; font-family: sans-serif; font-size: 80%';
     this.button.textContent = 'Stop';
 
     this.button.addEventListener('click', () => this.clicked());

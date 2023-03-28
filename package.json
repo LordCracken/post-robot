@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ./src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "eslint --fix ./src/**/*.{js,mjs}",
-    "format": "prettier --write ./src/**/*.{js,mjs,css,md,json,html} --config ./.prettierrc"
+    "format": "prettier --write ./src/**/*.{js,mjs,css,md,json,html} ./public/**/*.{js,mjs,css,md,json,html} --config ./.prettierrc"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
