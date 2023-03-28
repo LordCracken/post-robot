@@ -4,4 +4,6 @@ import VillageState from './scripts/village';
 import buildGraph from './scripts/buildGraph';
 
 const roadGraph = buildGraph(roads);
-const village = new VillageState();
+const village = VillageState.random(roadGraph);
+
+console.log(village);
