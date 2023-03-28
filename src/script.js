@@ -34,4 +34,23 @@ function buildGraph(edges) {
   return graph;
 }
 
-console.log(buildGraph(roads));
+const roadGraph = buildGraph(roads);
+
+class VillageState {
+  constructor(place, parcels) {
+    this.place = place;
+    this.parcels = parcels;
+  }
+
+  move(destination) {
+    if (!roadGraph[this.place].includes(destination)) return this;
+
+    const updatedParcels = this.parcels.map(p => {
+      if (p.place !== this.place) return p;
+      return { place: destination, address: p.address };
+    });
+    const undeliveredParcels = updatedParcels.filter(p => p.place !== p.address);
+
+    return new VillageState(destination, undeliveredParcels);
+  }
+}
