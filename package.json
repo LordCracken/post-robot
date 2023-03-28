@@ -4,11 +4,14 @@
   "description": "Eloquent JavaScript exercises solutions",
   "private": true,
   "scripts": {
-    "lint": "eslint ./src/**/*.{js,jsx,ts,tsx,json}",
-    "lint:fix": "eslint --fix ./src/**/*.{js,jsx,ts,tsx,json}",
+    "lint": "eslint ./src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "eslint --fix ./src/**/*.{js,jsx,ts,tsx}",
     "format": "prettier --write ./src/**/*.{js,jsx,ts,tsx,css,md,json,html} --config ./.prettierrc"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/eslint-parser": "^7.21.3",
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
