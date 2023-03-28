@@ -7,4 +7,4 @@ import buildGraph from './util/buildGraph.mjs';
 const roadGraph = buildGraph(roads);
 const village = VillageState.random(roadGraph);
 
-console.log(village);
+window.runRobotAnimation(village, goalOrientedRobot, [], roadGraph);
