@@ -1,6 +1,6 @@
 import findRoute from '../util/findRoute.mjs';
 
-function goalOrientedRobot({ place, parcels }, route, roads) {
+function goalOrientedRobot({ place, parcels }, roads, route) {
   if (route.length === 0) {
     let parcel = parcels[0];
 

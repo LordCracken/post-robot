@@ -76,7 +76,7 @@ class Animation {
   }
 
   tick() {
-    let { direction, memory } = this.robot(this.worldState, this.robotState, this.roads);
+    let { direction, memory } = this.robot(this.worldState, this.roads, this.robotState);
     this.worldState = this.worldState.move(direction);
     this.robotState = memory;
     this.turn++;
